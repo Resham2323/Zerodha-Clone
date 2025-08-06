@@ -1,0 +1,44 @@
+body {
+    margin:0;
+
+}
+
+.hero {
+    height: 400px;
+    width:80%;
+    
+}
+
+.nav-link {
+    margin-left: 40px;
+}
+
+
+.footer-anchor .anchors a {
+    text-decoration: none;
+    color:#666666;
+   
+}
+
+.footer-anchor .anchors p {
+    font-size: large;
+    color: #000;
+    font-weight: 500;
+}
+
+.footer-para {
+    font-size: small;
+    opacity: 0.8;
+}
+
+.footer-ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-ul a{
+    text-decoration: none;
+    color: black;
+    font-size: small;
+    opacity: 0.5;
+}
