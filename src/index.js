@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import HomePage from './LandingPage/Home/HomePage';
-import Signup from './LandingPage/Signup/Signup';
+import SignupPage from './LandingPage/Signup/SignupPage';
 import AboutPage from './LandingPage/About/AboutPage';
-import Pricing from './LandingPage/Pricing/Pricing';
-import  Product from './LandingPage/Product/Product';
-import  Support from './LandingPage/Support/Support'
+import PricingPage from './LandingPage/Pricing/PricingPage';
+import  ProductPage from './LandingPage/Product/ProductPage';
+import  SupportPage from './LandingPage/Support/SupportPage';
+import Navbar from './LandingPage/Home/Navbar';
+import Footer  from './LandingPage/Footer';
 import './index.css';
 
 
@@ -14,14 +16,16 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <Navbar />
     <Routes>
       <Route path='/' element={<HomePage/>}/>
-      <Route path='/Signup' element={<Signup/>}/>
-      <Route path='/About' element={<AboutPage/>}/>
-      <Route path='/Pricing' element={<Pricing/>}/>
-      <Route path='/Support' element={<Support/>}/>
-      <Route path='/Product' element={<Product/>}/>
+      <Route path='/signup' element={<SignupPage/>}/>
+      <Route path='/about' element={<AboutPage/>}/>
+      <Route path='/pricing' element={<PricingPage/>}/>
+      <Route path='/support' element={<SupportPage/>}/>
+      <Route path='/product' element={<ProductPage/>}/>
     </Routes>
+     <Footer />
   </BrowserRouter>
 );
 
