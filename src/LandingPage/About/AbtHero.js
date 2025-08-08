@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 function AbtHero() {
     return (
         <div className='container mt-5 mb-5 p-4' >
-            <div className='row mt-5 p-5'>
+            <div className='row p-5'>
                 <div className='row Abt-hero fs-3 mt-5 mb-5 border-bottom text-center'>
                     <p>We pioneered the discount broking model in India.<br />
                         Now, we are breaking ground with our technology.</p>
