@@ -52,3 +52,9 @@ body {
    
 }
 
+.charges {
+    background-color: rgb(78, 172, 2);
+    color: white;
+    padding:5px;
+    font-size: small;
+}

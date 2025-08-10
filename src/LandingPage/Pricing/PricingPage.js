@@ -7,6 +7,7 @@ function PricingPage() {
         <>
         <PriceHero/>
         <Brokerage/>
+        
         </>
      );
 }
