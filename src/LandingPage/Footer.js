@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
     return (
         <footer>
-        <div className='container border-top p-5'>
+        <div className='container border-top p-5' >
             <div className='row footer-anchor mb-5 mt-5'>
                 <div className='col-4 mb-5 '>
                     <a class="navbar-brand" href="#">
@@ -15,6 +15,14 @@ function Footer() {
                            
                     </a>
                     <p>© 2010 - 2025, Zerodha Broking Ltd.<br/> All rights reserved.</p>
+                    <div className='icons mt-4'>
+                    <i class="fa fa-youtube-play fa-1x fs-4 mx-2" aria-hidden="true" ></i>
+                    <i class="fa fa-whatsapp fa-1x fs-4 mx-2" aria-hidden="true" ></i>
+                    <i class="fa fa-telegram fa-1x fs-4 mx-2" aria-hidden="true"></i>
+                    <i class="fa fa-facebook-official fa-1x fs-4 mx-2" aria-hidden="true"></i><br/><hr/>
+                    <i class="fa fa-instagram fa-1x fs-4 mx-2" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin fa-1x fs-4 mx-2" aria-hidden="true"></i>
+                    </div>
                 </div>
                 <div className='col anchors'>
                     <p >Account</p>
