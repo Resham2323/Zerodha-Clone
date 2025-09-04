@@ -11,6 +11,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.11.0",
+    "caniuse-lite": "^1.0.30001739",
     "chart.js": "^4.5.0",
     "cross-env": "^10.0.0",
     "react": "^18.2.0",
@@ -24,7 +25,7 @@
   },
   "proxy": "http://localhost:8080",
   "scripts": {
-   "start": "cross-env PORT=3002 react-scripts start",
+    "start": "cross-env PORT=3002 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
