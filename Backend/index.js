@@ -3,7 +3,6 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const path = require("path");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 
@@ -24,20 +23,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
-
-// Frontend build
-app.use("/", express.static(path.join(__dirname, "public/frontend")));
-app.get("*", (req, res, next) => {
-  // Only handle frontend routes, skip /dashboard and API
-  if (req.path.startsWith("/dashboard") || req.path.startsWith("/all")) return next();
-  res.sendFile(path.join(__dirname, "public/frontend", "index.html"));
-});
-
-// Dashboard build
-app.use("/dashboard", express.static(path.join(__dirname, "public/dashboard")));
-app.get("/dashboard/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/dashboard", "index.html"));
-});
 
 // Routes
 app.get("/allholdings", async (req, res) => {

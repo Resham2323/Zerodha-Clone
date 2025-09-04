@@ -43,7 +43,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "/dashboard";
+          window.location.href = "http://localhost:3002";
         }, 1000);
       } else {
         handleError(message);
@@ -87,7 +87,7 @@ const Login = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/frontend"}>Signup</Link>
+          Already have an account? <Link to={"http://localhost:3000/signup"}>Signup</Link>
         </span>
       </form>
       <ToastContainer />
