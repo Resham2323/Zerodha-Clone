@@ -1,0 +1,9 @@
+# Env files
+.env
+*/.env
+*/*/.env
+
+# Node modules
+node_modules/
+*/node_modules/
+*/*/node_modules/
