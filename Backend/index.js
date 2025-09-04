@@ -24,6 +24,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 
+//serve frontend
+app.use("/", express.static(path.join(__dirname, "public/frontend")));
+
+// Serve dashboard
+app.use("/dashboard", express.static(path.join(__dirname, "public/dashboard")));
+
 // Routes
 app.get("/allholdings", async (req, res) => {
   console.log("✅ /allholdings route hit hua");
