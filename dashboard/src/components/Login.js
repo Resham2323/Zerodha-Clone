@@ -32,7 +32,7 @@ const Login = () => {
     console.log("Submitting:", inputValue);;
     try { 
       const { data } = await axios.post(
-        "http://localhost:8080/login",
+        "https://zerodha-clone-1-r5uj.onrender.com/login",
         {
           ...inputValue,
         },
@@ -43,7 +43,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:3002";
+          window.location.href = "https://zerodha-clone-gdfd.vercel.app/";
         }, 1000);
       } else {
         handleError(message);
@@ -87,7 +87,7 @@ const Login = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"http://localhost:3000/signup"}>Signup</Link>
+          Already have an account? <Link to={"https://zerodha-clone-three-pi.vercel.app/signup"}>Signup</Link>
         </span>
       </form>
       <ToastContainer />

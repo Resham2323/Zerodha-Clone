@@ -121,7 +121,7 @@ const Signup = () => {
               <button type="submit" className="mt-3 btn btn-primary">Signup</button>
               &nbsp;&nbsp;&nbsp;
               <span className="mt-5" >
-                Already have an account? <Link to={"http://localhost:3002/login"}>Login</Link>
+                Already have an account? <Link to={"https://zerodha-clone-gdfd.vercel.app/login"}>Login</Link>
               </span>
             </form>
 
