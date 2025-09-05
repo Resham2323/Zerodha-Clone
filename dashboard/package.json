@@ -23,7 +23,7 @@
     "react-toastify": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "http://localhost:8080",
+  
   "scripts": {
     "start": "cross-env PORT=3002 react-scripts start",
     "build": "react-scripts build",
