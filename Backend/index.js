@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8080;
 
 // Middlewares should be first
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3002"],
+  origin: ["https://zerodha-clone-v6vt.vercel.app/", "https://zerodha-clone-gdfd.vercel.app/"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
