@@ -7,26 +7,29 @@ import { VerticalGraph } from "./VerticalGraph";
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
-  useEffect(() => {
-    axios.get("/allholdings").then((res) => {
-      // console.log(res.data);
-      setAllHoldings(res.data);
-    });
-  }, []);
+useEffect(() => {
+  axios.get("/allholdings").then((res) => {
+    console.log("Holdings API response:", res.data);
 
-  // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  const labels = allHoldings.map((subArray) => subArray["name"]);
+    // Ensure always array
+    const holdingsData = Array.isArray(res.data) ? res.data : [res.data];
+    setAllHoldings(holdingsData);
+  });
+}, []);
 
-  const data = {
-    labels,
-    datasets: [
-      {
-        label: "Stock Price",
-        data: allHoldings.map((stock) => stock.price),
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
-      },
-    ],
-  };
+const labels = allHoldings.map((stock) => stock.name);
+
+const data = {
+  labels,
+  datasets: [
+    {
+      label: "Stock Price",
+      data: allHoldings.map((stock) => stock.price),
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+  ],
+};
+
 
   // export const data = {
   //   labels,
